@@ -1,0 +1,20 @@
+{
+  "name": "jeu-crane",
+  "version": "0.0.1",
+  "description": "Jeu crane fait avec Matterjs",
+  "main": "jeu.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "jeu",
+    "matterjs",
+    "js"
+  ],
+  "author": "Marc-André Martin mamarmite.com",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "matter-js": "^0.18.0"
+  },
+  "devDependencies": {}
+}

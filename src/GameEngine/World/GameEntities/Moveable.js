@@ -6,17 +6,19 @@ export default class Moveable {
     initY;
     width;
     height;
+    options;
 
     constructor(props={}) {
-        this.initX = props.x | 0;
-        this.initY = props.y | 0;
-        this.width = props.w | 15;
-        this.height = props.h | 15;
+        this.initX = props.x || 0;
+        this.initY = props.y || 0;
+        this.width = props.w || 100;
+        this.height = props.h || 100;
+        this.options = props.options || {};
     }
 
     static create(props={}) {
         let body = new Moveable(props);
-        return GameEngine.getMatter().Bodies.rectangle(body.initX, body.initY, body.width, body.height);
+        return GameEngine.getMatter().Bodies.rectangle(body.initX, body.initY, body.width, body.height, this.options);
     }
 
 }

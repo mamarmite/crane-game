@@ -1,4 +1,10 @@
 import GameEngine from "./GameEngine/core.js";
 
-const game = new GameEngine(1920, 1080);
-game.init();
+var game;
+
+window.addEventListener('load', () => {
+    //let container = document.getElementById('craneGame')
+    let padding = 100;
+    game = new GameEngine(document.documentElement.clientWidth - padding, document.documentElement.clientHeight - padding);
+    game.init();
+});

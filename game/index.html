@@ -16,9 +16,11 @@
             box-sizing: border-box;
         }
 
-        body {
+        body, html {
             margin: 0;
             padding: 0;
+            width: 100%;
+            height: 100%;
         }
 
         .container {
@@ -29,13 +31,45 @@
         .text-center {
             text-align: center;
         }
+        .controlKey {
+            display: inline-block;
+            padding: 0.5em;
+            background-color: #F0F0F0;
+            border: 1px solid #D0D0D0;
+            font-size: 0.8em;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+        }
+        li {
+            display: inline-block;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
 <main class="container">
     <article>
-        <div id="craneGame"></div>
-        <h1 class="text-center">Le jeu du <em>Crane</em></h1>
+        <section id="craneGame"></section>
+        <section>
+            <h1 class="text-center">Le jeu du <em>Crane</em></h1>
+            <p class="event-log-contents text-center">
+                Contrôle :
+            </p>
+            <ul>
+                <li><span class="controlKey">a</span> Gauche</li>
+                <li><span class="controlKey">d</span> Droite</li>
+                <li><span class="controlKey">w</span> Haut</li>
+                <li><span class="controlKey">s</span> Bas</li>
+            </ul>
+        </section>
     </article>
 </main>
 <script src="scripts/crane-game.js"></script>
